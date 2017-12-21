@@ -88,7 +88,7 @@ class TicTacToe
       turn
       end
       if won? puts "Congratulations #{winner}!"
-        elseif draw? puts "Cat's Game!"
+        elsif draw? puts "Cat's Game!"
     end
   end
 end
