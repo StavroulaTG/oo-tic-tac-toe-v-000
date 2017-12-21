@@ -23,7 +23,6 @@ class TicTacToe
     !(@board[index] == " " || @board[index] == nil)
   end
 
-
   def move(index, token = "X")
     @board[index] = token
   end
@@ -65,31 +64,35 @@ class TicTacToe
   end
 
   def full?
-     @board.none? {|i| i == " "}
-   end
+    @board.none? {|i| i == " "}
+  end
 
-   def draw?
-     if full? && !won?
-       true
-     end
-   end
+  def draw?
+    if full? && !won?
+      true
+    end
+  end
 
-   def over?
-     won? || full? || draw?
-   end
+  def over?
+    won? || full? || draw?
+  end
 
-   def winner
-     if winner = won?
-       @board[winner[0]]
-     end
-   end
+  def winner
+    if winner = won?
+      @board[winner[0]]
+    end
+  end
 
-   def play
-     until over?
-       turn
-     end
-     won? puts "Congratulations #{winner}!"
-     draw? puts "Cat's Game!"
-   end
- end
-end 
+  def play
+    until over?
+      turn
+    end
+    won? puts "Congratulations #{winner}!"
+    draw? puts "Cat's Game!"
+  end
+end
+
+
+
+
+
