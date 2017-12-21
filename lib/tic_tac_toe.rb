@@ -87,8 +87,8 @@ class TicTacToe
     until over?
       turn
       end
-      won? puts "Congratulations #{winner}!"
-      draw? puts "Cat's Game!"
+      if won? puts "Congratulations #{winner}!"
+        elseif draw? puts "Cat's Game!"
     end
   end
 end
